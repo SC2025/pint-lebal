@@ -20,31 +20,38 @@
           font: bold;
           font-weight: 1000;
           font-size: small;
-        
-
         }
 #all1,#all2,#all3,#all4{
 background-color: rgb(255, 255, 255);
 border: 2px solid black;
-height: 50vh;
+height: fit-content;
 width: 50%;
-align-items: center;
-justify-content: center;
-text-align: center;
-padding: PX;
+padding: 7PX;
 margin: 2PX;
 
 
 }
-        
+   img{
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+   }     
 #alldiv1,#alldiv2{
     display: flex;
-    height: 48vh;
+    height: fit-content;
 width: 100%;
-
+padding: 5px;
 }
 .heding{
     font-weight: 1000;
+}
+
+.qeflex{
+    display: flex;
+}
+.bor{
+    border: 2px solid black;
+    padding: 3px;
 }
 
     </STyle>
@@ -56,7 +63,12 @@ width: 100%;
     <textarea name="paragraph_text" cols="50" rows="10" id="A1"></textarea>
 <P id="C1"></p>
     <BUtton id="B1">submit</BUtton>
-    
+    <div class="bor">
+        <p class="qeflex"> scan or visit again <br>to more shoping
+            <img src="qr.png" alt="qr">
+            &nbsp&nbsphttps://SC2025.github.io/SC/
+        </p>
+    </div>
 </div>
 
 
@@ -65,6 +77,12 @@ width: 100%;
     <textarea name="paragraph_text" cols="50" rows="10" id="A2"></textarea>
 <P id="C2"></p>
     <BUtton id="B2">submit</BUtton>
+    <div class="bor">
+        <p class="qeflex"> scan or visit again <br>to more shoping
+            <img src="qr.png" alt="qr">
+            &nbsp&nbsphttps://SC2025.github.io/SC/
+        </p>
+    </div>
     
 </div>
 
@@ -80,7 +98,12 @@ width: 100%;
         <textarea name="paragraph_text" cols="50" rows="10" id="A3"></textarea>
 <P id="C3"></p>
     <BUtton id="B3">submit</BUtton>
-    
+    <div class="bor">
+    <p class="qeflex"> scan or visit again <br>to more shoping
+        <img src="qr.png" alt="qr">
+        &nbsp&nbsphttps://SC2025.github.io/SC/
+    </p>
+</div>
 </div>
 
 
@@ -89,6 +112,12 @@ width: 100%;
     <textarea name="paragraph_text" cols="50" rows="10" id="A4"></textarea>
 <P id="C4"></p>
     <BUtton id="B4">submit</BUtton>
+    <div class="bor">
+        <p class="qeflex"> scan or visit again <br>to more shoping
+            <img src="qr.png" alt="qr">
+            &nbsp&nbsphttps://SC2025.github.io/SC/
+        </p>
+    </div>
     
 </div>
 
@@ -101,6 +130,7 @@ width: 100%;
         document.getElementById("C1").innerText = document.getElementById("A1").value;
         document.getElementById("A1").remove();
         document.getElementById("B1").remove();
+
     })
 
     document.getElementById("B2").addEventListener("click",function () {
