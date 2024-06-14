@@ -27,7 +27,8 @@ background-color: rgb(255, 255, 255);
 border: 2px solid black;
 height: fit-content;
 width: 50%;
-padding: 7PX;
+/* padding: 7PX; */
+padding-left: 7PX;
 margin: 2PX;
 
 
@@ -41,7 +42,7 @@ margin: 2PX;
     display: flex;
     height: fit-content;
 width: 100%;
-padding: 5px;
+/* padding: 5px; */
 }
 .heding{
   
@@ -54,9 +55,7 @@ padding: 5px;
     border: 2px solid black;
 }
 
-.qeflex{
-    display: flex;
-}
+
 .bor{
     border: 2px solid black;
     padding: 3px;
@@ -72,6 +71,14 @@ padding: 5px;
 *{
   font-weight: 700;
 }
+#B2R,#B3R,#B4R{
+  background-color: rgb(255, 0, 0);
+  color: aliceblue;
+}
+#B1,#B2,#B3,#B4{
+  background-color: rgb(49, 255, 70);
+  color: black;
+}
     </STyle>
 </head>
 <body>
@@ -85,12 +92,7 @@ padding: 5px;
     <textarea name="paragraph_text" cols="50" rows="10" id="A1"></textarea>
 <P id="C1"></p>
     <BUtton id="B1">submit</BUtton>
-    <div class="bor">
-        <div class="qeflex"> scan or visit again <br>to more shoping
-            <img src="qr.png" alt="qr">
-            &nbsp&nbsphttps://SC2025.github.io/SC/
-        </div>
-    </div>
+ 
 </div>
 
 
@@ -103,12 +105,8 @@ padding: 5px;
     <textarea name="paragraph_text" cols="50" rows="10" id="A2"></textarea>
 <P id="C2"></p>
     <BUtton id="B2">submit</BUtton>
-    <div class="bor">
-        <div class="qeflex"> scan or visit again <br>to more shoping
-            <img src="qr.png" alt="qr">
-            &nbsp&nbsphttps://SC2025.github.io/SC/
-        </div>
-    </div>
+    <BUtton id="B2R">REMOVE</BUtton>
+
     
 </div>
 
@@ -128,12 +126,8 @@ padding: 5px;
         <textarea name="paragraph_text" cols="50" rows="10" id="A3"></textarea>
 <P id="C3"></p>
     <BUtton id="B3">submit</BUtton>
-    <div class="bor">
-    <div class="qeflex"> scan or visit again <br>to more shoping
-        <img src="qr.png" alt="qr">
-        &nbsp&nbsphttps://SC2025.github.io/SC/
-    </div>
-</div>
+    <BUtton id="B3R">REMOVE</BUtton>
+
 </div>
 
 
@@ -146,12 +140,7 @@ padding: 5px;
     <textarea name="paragraph_text" cols="50" rows="10" id="A4"></textarea>
 <P id="C4"></p>
     <BUtton id="B4">submit</BUtton>
-    <div class="bor">
-        <div class="qeflex"> scan or visit again <br>to more shoping
-            <img src="qr.png" alt="qr">
-            &nbsp&nbsphttps://SC2025.github.io/SC/
-        </div>
-    </div>
+    <BUtton id="B4R">REMOVE</BUtton>
     
 </div>
 
@@ -171,19 +160,38 @@ padding: 5px;
         document.getElementById("C2").innerText = document.getElementById("A2").value;
         document.getElementById("A2").remove();
         document.getElementById("B2").remove();
+        document.getElementById("B2R").remove();
+
     })
 
     document.getElementById("B3").addEventListener("click",function () {
         document.getElementById("C3").innerText = document.getElementById("A3").value;
         document.getElementById("A3").remove();
         document.getElementById("B3").remove();
+        document.getElementById("B3R").remove();
     })
 
     document.getElementById("B4").addEventListener("click",function () {
         document.getElementById("C4").innerText = document.getElementById("A4").value;
         document.getElementById("A4").remove();
         document.getElementById("B4").remove();
+        document.getElementById("B4R").remove();
     })
+
+    document.getElementById("B2R").addEventListener("click",function (){
+    document.getElementById("all2").remove();
+    })
+
+    document.getElementById("B3R").addEventListener("click",function (){
+    document.getElementById("all3").remove();
+    })
+
+    document.getElementById("B4R").addEventListener("click",function (){
+    document.getElementById("all4").remove();
+    })
+
+ 
+
 </SCript>
 </body>
 </html>
