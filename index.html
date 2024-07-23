@@ -95,6 +95,7 @@ color: rgb(0, 0, 0);
 </head>
 <body>
     <div id="alldiv1">
+
     <div id="all1">
       <DIV class="heding">
         <img class="img" src="logo.jpg" alt="logo">
@@ -103,7 +104,7 @@ color: rgb(0, 0, 0);
         <br>
     </DIV>
     <div>
-      SR.NO- <INPut class="SR_NO" value="" type="number"></INPut>
+      SR.NO- <INPut id="sr1" class="SR_NO" value="" type="number"></INPut>
       For more shopping scan qr code or visit:- https://sc2025.github.io/SAHYADRI/
 </div>
     <textarea name="paragraph_text" cols="50" rows="10" id="A1"></textarea>
@@ -121,7 +122,7 @@ color: rgb(0, 0, 0);
     <br>
 </DIV>
 <div>
-  SR.NO- <INPut class="SR_NO" value="" type="number"></INPut>
+  SR.NO- <INPut id="sr2" class="SR_NO" value="" type="number"></INPut>
   For more shopping scan qr code or visit:- https://sc2025.github.io/SAHYADRI/
 </div>
     <textarea name="paragraph_text" cols="50" rows="10" id="A2"></textarea>
@@ -139,6 +140,7 @@ color: rgb(0, 0, 0);
 
 
 <div id="alldiv2">
+
     <div id="all3">
       <DIV class="heding">
         <img class="img" src="logo.jpg" alt="logo">
@@ -147,7 +149,7 @@ color: rgb(0, 0, 0);
         <br>
     </DIV>
     <div>
-      SR.NO- <INPut class="SR_NO" value="" type="number"></INPut>
+      SR.NO- <INPut id="sr3" class="SR_NO" value="" type="number"></INPut>
       For more shopping scan qr code or visit:- https://sc2025.github.io/SAHYADRI/
 </div>
     <textarea name="paragraph_text" cols="50" rows="10" id="A3"></textarea>
@@ -166,7 +168,7 @@ color: rgb(0, 0, 0);
         <br>
     </DIV>
     <div>
-      SR.NO- <INPut class="SR_NO" value="" type="number"></INPut>
+      SR.NO- <INPut id="sr4" class="SR_NO" value="" type="number"></INPut>
       For more shopping scan qr code or visit:- https://sc2025.github.io/SAHYADRI/
 </div>
     <textarea name="paragraph_text" cols="50" rows="10" id="A4"></textarea>
@@ -182,33 +184,99 @@ color: rgb(0, 0, 0);
 
 <SCript>
     document.getElementById("B1").addEventListener("click",function () {
-        document.getElementById("C1").innerText = document.getElementById("A1").value;
+       
+if (document.getElementById("sr1").value == "") {
+    alert("user please fill SR.NO")
+}
+else{
+    
+        // Original String
+        var str = document.getElementById("A1").value;
+
+// Replacing characters
+let newString = 
+    str.replace("send SMS", '').replace("Order Details", '');
+
+// Printing the result
+document.getElementById("C1").innerText = newString;
+
+
         document.getElementById("A1").remove();
         document.getElementById("B1").remove();
+}
 
     })
 
+
+
+
+
     document.getElementById("B2").addEventListener("click",function () {
-        document.getElementById("C2").innerText = document.getElementById("A2").value;
+ 
+if (document.getElementById("sr2").value == "") {
+    alert("user please fill SR.NO")
+}
+else{
+                // Original String
+                var str = document.getElementById("A2").value;
+
+// Replacing characters
+let newString = 
+    str.replace("send SMS", '').replace("Order Details", '');
+
+// Printing the result
+document.getElementById("C2").innerText = newString;
+
+
         document.getElementById("A2").remove();
         document.getElementById("B2").remove();
         document.getElementById("B2R").remove();
-
+}
     })
 
     document.getElementById("B3").addEventListener("click",function () {
-        document.getElementById("C3").innerText = document.getElementById("A3").value;
+
+        if (document.getElementById("sr3").value == "") {
+    alert("user please fill SR.NO")
+}
+else{
+        // Original String
+        var str = document.getElementById("A3").value;
+
+// Replacing characters
+let newString = 
+    str.replace("send SMS", '').replace("Order Details", '');
+
+// Printing the result
+document.getElementById("C3").innerText = newString;
+
         document.getElementById("A3").remove();
         document.getElementById("B3").remove();
         document.getElementById("B3R").remove();
+    }
     })
 
     document.getElementById("B4").addEventListener("click",function () {
-        document.getElementById("C4").innerText = document.getElementById("A4").value;
+        if (document.getElementById("sr4").value == "") {
+    alert("user please fill SR.NO")
+}
+else{
+        // Original String
+        var str = document.getElementById("A4").value;
+
+// Replacing characters
+let newString = 
+    str.replace("send SMS", '').replace("Order Details", "");
+
+// Printing the result
+document.getElementById("C4").innerText = newString;
+
         document.getElementById("A4").remove();
         document.getElementById("B4").remove();
         document.getElementById("B4R").remove();
+}
     })
+    
 
     document.getElementById("B2R").addEventListener("click",function (){
     document.getElementById("all2").remove();
@@ -222,7 +290,8 @@ color: rgb(0, 0, 0);
     document.getElementById("all4").remove();
     })
 
- 
+
+
 
 </SCript>
 </body>
